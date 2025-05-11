@@ -4,15 +4,18 @@
 
 import random
 answer = random.randint(1,100)
-#print(r)
-#userinput != answer
+count = 0
+
 while True: 
-	userinput = input('請輸入1~100的數字')
-	userinput = float(userinput)
+	count += 1
+	userinput = input('請輸入1~100的數字: ')
+	userinput = int(userinput)
 	if userinput == answer:
 		print('你答對了！')
+		print('你輸入了', count,'次')
 		break
 	elif answer > userinput:
 		print('答案比你輸入數值的大')
 	elif answer < userinput:
 		print('答案比你輸入數值的小')
+	print('你輸入了', count,'次')
