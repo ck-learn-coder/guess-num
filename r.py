@@ -3,12 +3,16 @@
 #錯了要跟他說比答案大還是小，對了要印出"終於答對了"
 
 import random
-answer = random.randint(1,100)
+start = input('請輸入隨機數字的起始值: ')
+end = input('請輸入隨機數字的結束值: ')
+start = int(start)
+end = int(end)
+answer = random.randint(start, end)
 count = 0
 
 while True: 
 	count += 1
-	userinput = input('請輸入1~100的數字: ')
+	userinput = input('請猜猜數字: ')
 	userinput = int(userinput)
 	if userinput == answer:
 		print('你答對了！')
